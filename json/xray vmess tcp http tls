@@ -1,0 +1,43 @@
+{
+  "log": {
+    "access": "/var/log/xray/access2.log",
+    "error": "/var/log/xray/error.log",
+    "loglevel": "info"
+       },
+    "inbounds": [
+           {
+            "port": 1311,
+            "listen": "127.0.0.1",
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "006a337f-8a60-42e8-93b2-704f94c98c92",
+                        "level": 0,
+                        "email": "love@example.com"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "none",
+                "tcpSettings": {
+                    "acceptProxyProtocol": true,
+                    "header": {
+                        "type": "http",
+                        "request": {
+                            "path": [
+                                "/xray-vmesstcp"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
+}
