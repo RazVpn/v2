@@ -1,0 +1,6 @@
+mkdir /root/.acme.sh
+curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
+chmod +x /root/.acme.sh/acme.sh
+/root/.acme.sh/acme.sh --register-account -m ndaktau21@gmail.com --server zerossl
+/root/.acme.sh/acme.sh --server zerossl --issue -d try2.vcode.codes --standalone -k ec-256
+~/.acme.sh/acme.sh --installcert -d try2.vcode.codes --fullchainpath /usr/local/etc/xray/xray.crt --keypath /usr/local/etc/xray/xray.key --ecc
