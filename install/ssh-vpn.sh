@@ -352,6 +352,7 @@ chmod +x port-xray
 chmod +x panel-domain
 chmod +x system
 chmod +x themes
+sed -i -e 's/\r$//' menu
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 echo "0 0 * * * root delete" >> /etc/crontab
