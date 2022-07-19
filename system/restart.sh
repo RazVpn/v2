@@ -124,8 +124,6 @@ case $Restart in
                 5)
                 clear
                 /etc/init.d/openvpn restart
-                systemctl restart --now openvpn-server@server-tcp-1194
-                systemctl restart --now openvpn-server@server-udp-2200
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
