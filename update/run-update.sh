@@ -10,7 +10,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		exit 1
 fi
 echo ""
-version=$(cat /home/ver)
+ver=$(cat /home/ver)
 ver=$( curl https://raw.githubusercontent.com/${GitUser}/versionv2/main/ver.conf )
 clear
 # CEK UPDATE
@@ -88,7 +88,6 @@ echo -e "\e[0;32mNew Version Downloading started!\e[0m"
 sleep 2
 cd /usr/bin
 wget -O update "https://raw.githubusercontent.com/${GitUser}/v2/main/update/update.sh"
-wget -O bannermenu "https://raw.githubusercontent.com/${GitUser}/v2/main/update/bannermenu.sh"
 wget -O change-port "https://raw.githubusercontent.com/${GitUser}/v2/main/change.sh"
 wget -O add-ws "https://raw.githubusercontent.com/${GitUser}/v2/main/add-user/add-ws.sh"
 chmod +x update
