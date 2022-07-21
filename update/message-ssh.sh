@@ -38,7 +38,7 @@ Error="Banner SSH ${Red_font_prefix}[OFF]${Font_color_suffix}"
 cek=$(cat /home/bannerssh)
 function defaultv () {
 rm -f /etc/issue.net
-wget -O /etc/issue.net https://raw.githubusercontent.com/${GitUser}/menu/main/banner/bannersshDefault.conf && chmod +x /etc/issue.net
+wget -O /etc/issue.net https://raw.githubusercontent.com/${GitUser}/menu/main/banner/bannerssh.conf && chmod +x /etc/issue.net
 echo "0.1" > /home/bannerssh
 clear
 echo -e "Succesfully Use Default Version."

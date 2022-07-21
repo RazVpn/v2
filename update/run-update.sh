@@ -21,7 +21,7 @@ Error="Version ${Green_font_prefix}[$ver]${Font_color_suffix} available${Red_fon
 ver=$(cat /home/ver)
 new_version=$( curl https://raw.githubusercontent.com/${GitUser}/versionv2/main/ver.conf | grep $version )
 #Status Version
-if [ $ver = $new_version ]; then
+if [ $version = $new_version ]; then
 sts="${Info2}"
 else
 sts="${Error}"
@@ -35,10 +35,10 @@ echo "'----------------------------------------------'" | lolcat
 echo -e " \e[0;36mVERSION NOW \e[0;33m>>\e[0m $Info1"
 echo -e " \e[0;36mSTATUS UPDATE \e[0;33m>>\e[0m $sts"
 echo -e ""
-echo -e "       \e[1;31mWould you like to proceed?\e[0m"
+echo -e "\e[1;31mWould you like to proceed?\e[0m"
 echo ""
-echo "            [ Select Option ]" | lolcat
-echo -e "      \e[0;32m[1]\e[0m Check Script Update Now"
+echo -e "   [ Select Option ]" | lolcat
+echo -e "\e[0;32m[1]\e[0m Check Script Update Now"
 echo "-----------------------------------------" | lolcat
 echo -e "      \e[0;32m[x]\e[0m Back To Update Menu"
 echo -e "      \e[0;32m[y]\e[0m Back To Main Menu"
@@ -70,7 +70,7 @@ sleep 2
 echo -e "\e[1;36mStart Update For New Version, Please Wait..\e[m"
 sleep 2
 clear
-echo -e "\e[0;32mGetting New Version Script By V-Code...\e[0m"
+echo -e "\e[0;32mGetting New Version Script By Ichikaa...\e[0m"
 sleep 1
 echo ""
 # UPDATE RUN-UPDATE
@@ -88,12 +88,15 @@ echo -e "\e[0;32mNew Version Downloading started!\e[0m"
 sleep 2
 cd /usr/bin
 wget -O update "https://raw.githubusercontent.com/${GitUser}/v2/main/update/update.sh"
+wget -O message-ssh "https://raw.githubusercontent.com/${GitUser}/v2/main/update/message-ssh.sh"
+wget -O bannermenu "https://raw.githubusercontent.com/${GitUser}/v2/main/update/bannermenu.sh"
 wget -O change-port "https://raw.githubusercontent.com/${GitUser}/v2/main/change.sh"
 wget -O add-ws "https://raw.githubusercontent.com/${GitUser}/v2/main/add-user/add-ws.sh"
 chmod +x update
 chmod +x bannermenu
 chmod +x change-port
 chmod +x add-ws
+chmod +x message-ssh
 clear
 echo -e ""
 echo -e "\e[0;32mDownloaded successfully!\e[0m"
