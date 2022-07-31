@@ -76,7 +76,7 @@ systemctl restart wg-quick@wg0
   - Websocket SSH(HTTP)     : 2081
   - Websocket SSL(HTTPS)    : 222
   - Websocket OpenVPN       : 2084
-  - Squid Proxy             : 3128, 8080, 8000
+  - Squid Proxy             : 3128, 8000
   - Badvpn                  : 7100, 7200, 7300
   - Nginx                   : 81
   - Wireguard               : 5820
@@ -88,13 +88,11 @@ systemctl restart wg-quick@wg0
   - SS-OBFS HTTP            : 3443-3543
   - XRAY Vmess TLS          : 443
   - XRAY Vmess None TLS     : 80
-  - XRAY Vless TLS          : 8443
-  - XRAY Vless None TLS     : 8880
-  - XRAY Vless Xtls DIRECT  : 9443
-  - XRAY Vmess Grpc TLS     : 2083
-  - XRAY Vless Grpc TLS     : 880
-  - XRAY Trojan TCP TLS     : 2087
-  - XRAY Trojan GRPC TLS    : 2087
+  - XRAY Vless TLS          : 443
+  - XRAY Vless None TLS     : 8080
+  - XRAY Vless Xtls DIRECT  : 443
+  - XRAY Trojan TCP TLS     : 443
+  - Trojan Go               : 2083
 
  >>> Server Information & Other Features
    - Timezone                 : Asia/Kuala_Lumpur (GMT +8)
