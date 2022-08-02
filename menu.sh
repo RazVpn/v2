@@ -47,8 +47,7 @@ c_xvless=$(grep -oc '### [^ ]*' /etc/xray/vless-tls.json | cut -d' ' -f2)
 c_grpc=$(grep -oc '### [^ ]*' /etc/xray/vless-grpc.json | cut -d' ' -f2)
 c_vmess=$(grep -oc '### [^ ]*' /etc/v2ray/config.json | cut -d' ' -f2)
 c_vless=$(grep -oc '### [^ ]*' /etc/v2ray/vless.json | cut -d' ' -f2)
-total_xray=$(($c_xtls + $c_xvmess + $c_xvless + $c_grpc))
-total_v2ray=$(($c_vmess + $c_vless))
+total_xray=$(($c_xtls + $c_xvmess + $c_xvless ))
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 vnstat -i eth0 >/root/t1
 bulan=$(date +%b)
@@ -150,8 +149,8 @@ echo -e "  \e[$text Order ID             : $oid"
 echo -e "  \e[$text Certificate Status   : Expired in $certifacate days"
 echo -e "  \e[$text Provided By          : $creditt"
 echo -e   " \e[${line}════════════════════════════════════════════════════════════\e[m"
-echo -e "  \e[${text} TOTAL USER        SSH/OVPN          XRAY            V2RAY\e[m"
-echo -e "  \e[${text}                     $total_ssh               $total_xray                $total_v2ray\e[m"
+echo -e "  \e[${text} TOTAL USER        SSH/OVPN          XRAY\e[m"
+echo -e "  \e[${text}                     $total_ssh               $total_xray\e[m"
 echo -e   " \e[$line════════════════════════════════════════════════════════════\e[m"
 echo -e   " \e[$back_text                        \e[30m[\e[$box MAIN MENU\e[30m ]\e[1m                       \e[m"
 echo -e   " \e[$line════════════════════════════════════════════════════════════\e[m"
