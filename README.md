@@ -1,4 +1,4 @@
-# Script Ichikaa (V1)
+# Script Ichikaa (V1) Websocket 
  Welcome 
 
  <h2 align="center">AutoScript VPN By Ichikaa <img src="https://img.shields.io/badge/Version-1.0-blue.svg"></h2>
