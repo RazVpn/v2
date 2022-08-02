@@ -49,46 +49,6 @@ c_vmess=$(grep -oc '### [^ ]*' /etc/v2ray/config.json | cut -d' ' -f2)
 c_vless=$(grep -oc '### [^ ]*' /etc/v2ray/vless.json | cut -d' ' -f2)
 total_xray=$(($c_xtls + $c_xvmess + $c_xvless ))
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-vnstat -i eth0 >/root/t1
-bulan=$(date +%b)
-today=$(vnstat -i eth0 | grep today | awk '{print $8}')
-today_v=$(vnstat -i eth0 | grep today | awk '{print $9}')
-today_rx=$(vnstat -i eth0 | grep today | awk '{print $2}')
-today_rxv=$(vnstat -i eth0 | grep today | awk '{print $3}')
-today_tx=$(vnstat -i eth0 | grep today | awk '{print $5}')
-today_txv=$(vnstat -i eth0 | grep today | awk '{print $6}')
-if [ "$(grep -wc ${bulan} /root/t1)" != '0' ]; then
-  bulan=$(date +%b)
-  month=$(vnstat -i eth0 | grep "$bulan " | awk '{print $9}')
-  month_v=$(vnstat -i eth0 | grep "$bulan " | awk '{print $10}')
-  month_rx=$(vnstat -i eth0 | grep "$bulan " | awk '{print $3}')
-  month_rxv=$(vnstat -i eth0 | grep "$bulan " | awk '{print $4}')
-  month_tx=$(vnstat -i eth0 | grep "$bulan " | awk '{print $6}')
-  month_txv=$(vnstat -i eth0 | grep "$bulan " | awk '{print $7}')
-else
-  bulan=$(date +%Y-%m)
-  month=$(vnstat -i eth0 | grep "$bulan " | awk '{print $8}')
-  month_v=$(vnstat -i eth0 | grep "$bulan " | awk '{print $9}')
-  month_rx=$(vnstat -i eth0 | grep "$bulan " | awk '{print $2}')
-  month_rxv=$(vnstat -i eth0 | grep "$bulan " | awk '{print $3}')
-  month_tx=$(vnstat -i eth0 | grep "$bulan " | awk '{print $5}')
-  month_txv=$(vnstat -i eth0 | grep "$bulan " | awk '{print $6}')
-fi
-if [ "$(grep -wc yesterday /root/t1)" != '0' ]; then
-  yesterday=$(vnstat -i eth0 | grep yesterday | awk '{print $8}')
-  yesterday_v=$(vnstat -i eth0 | grep yesterday | awk '{print $9}')
-  yesterday_rx=$(vnstat -i eth0 | grep yesterday | awk '{print $2}')
-  yesterday_rxv=$(vnstat -i eth0 | grep yesterday | awk '{print $3}')
-  yesterday_tx=$(vnstat -i eth0 | grep yesterday | awk '{print $5}')
-  yesterday_txv=$(vnstat -i eth0 | grep yesterday | awk '{print $6}')
-else
-  yesterday=NULL
-  yesterday_v=NULL
-  yesterday_rx=NULL
-  yesterday_rxv=NULL
-  yesterday_tx=NULL
-  yesterday_txv=NULL
-fi
 
 # STATUS EXPIRED ACTIVE
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[4$below" && Font_color_suffix="\033[0m"
