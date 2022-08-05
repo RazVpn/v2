@@ -1,7 +1,7 @@
 # /usr/local/bin/cdn-dropbear
 [Unit]
-Description=Python WS-Dropbear By Virtual
-Documentation=https://virtual.xyz
+Description=Python WS-Dropbear By Ichikaa
+Documentation=https://razvpn.online
 After=network.target nss-lookup.target
 
 [Service]
