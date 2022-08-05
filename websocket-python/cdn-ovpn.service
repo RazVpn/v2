@@ -1,7 +1,7 @@
 # /usr/local/bin/cdn-ovpn
 [Unit]
-Description=Python WS-Ovpn By Virtual
-Documentation=https://virtual.xyz
+Description=Python WS-Ovpn By Ichikaa
+Documentation=https://razvpn.online
 After=network.target nss-lookup.target
 
 [Service]
