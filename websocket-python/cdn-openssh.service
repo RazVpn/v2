@@ -1,7 +1,7 @@
 # /usr/local/bin/cdn-openssh
 [Unit]
-Description=Python WS-OpenSSH By Virtual
-Documentation=https://virtual.xyz
+Description=Python WS-OpenSSH By Ichikaa
+Documentation=https://razvpn.online
 After=network.target nss-lookup.target
 
 [Service]
