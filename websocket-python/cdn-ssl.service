@@ -1,7 +1,7 @@
 # /usr/local/bin/cdn-ssl
 [Unit]
-Description=Python WS-SSL By Virtual
-Documentation=https://virtual.xyz
+Description=Python WS-SSL By Ichikaa
+Documentation=https://razvpn.online
 After=network.target nss-lookup.target
 
 [Service]
